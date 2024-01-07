@@ -1,0 +1,525 @@
+<html>
+	
+<style>  /*Стиль кнопки "наверх"*/
+.topbutton {
+width:100px;
+border:2px solid #ccc;
+background:#0000FF;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:50px;
+right:50px;
+cursor:pointer;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+	</style>
+	
+	<style>                             /*Стиль строки поиска*/
+	* {box-sizing: border-box;}
+form {
+  position: absolute;
+  width: 500px;
+  top: 20px;
+	left: 650px;
+}
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #3E44B9;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #3E44B9;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button:before {
+  content: "\1F50D";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+	</style>
+		
+	
+	<head>
+<title>Виртуальная реальность</title>
+<style>                                                                                 /*Стиль градиента для header*/
+.linear-gradient {
+  background-image: linear-gradient(-45deg, #000077, #a264d1);
+}
+</style>	
+
+	<style>                                                                           /*CSS код шапки header*/
+		
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;           /*Цвет кнопок и названия сайта*/
+}
+a:hover {
+    color: rgb(179, 179, 179);
+}
+.site-header {
+    border-bottom: 2px solid #ccc;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.site-identity h1 {
+    font-size: 1.5em;
+    margin: 0.6em 70;
+    display: inline-block;
+}
+.site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+	</style>                    
+
+	
+	
+<style>          /*Скроллящиеся картинки*/
+
+.section {
+	display: grid;
+	min-height: 110vh;
+	padding-top: 20px;
+}
+.section:nth-child(2) {
+	place-items: center;
+	text-align: center;
+	background:no-repeat center/100% url("img/Вид_с_очков_4.png");
+}		
+</style>	
+	
+<style> /* Подключаем CSS для расположения элементов списка горизонтально*/
+   ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+   }
+</style>
+		
+
+	<style>
+	body {
+		background-image: url("img/Фон_VR_размытие2,5.png"); /* Фоновый цвет и фоновый рисунок*/
+		color: #fff; /*Цвет текста на странице*/
+		background-attachment: fixed; /* Фон страницы фиксируется */
+		background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+		background-size: 100%;
+	}
+   </style>
+
+
+<style>	
+.article {
+	float: right;
+	margin-bottom: 0px;
+	padding: 00 00px;
+	width: 800 ;
+	height: 600;
+	overflow: hidden;
+	position:relative;
+}		
+</style>
+	
+	
+<style>
+.shadow {
+	text-shadow: 2px 0 2px #000, 0 2px 2px #000, -1px 0 1px #000, 0 -1px 1px #000;
+	color:#;
+	}
+.gradienttext {
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(135deg, #9d05e3, #3011f7);
+	font-size: 25; 
+}
+</style>
+		
+<style>
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+}
+</style>		
+		
+	
+<style>		
+ {
+  margin: -15em auto;
+</style>		
+		
+		
+
+		
+<style>		/*Подвал сайта*/
+.footer {
+  background-color: #2e34e5;
+   position: static;
+   right: 0;
+   bottom: 0;
+	height: 600px;
+   text-align: center; 
+   width: 100%;   
+   font-size: 19px;
+font-weight: bold;
+  color: #fafaff;  
+ }
+</style>		
+		
+
+<style>   /*Подвал сайта*/
+.wrapper {
+  display: flex;
+}
+.block {
+  display: inline-block;
+  margin: 1 50 1;
+	padding: 1 1 1;
+	font-size: 1.3vw;
+}
+</style>		
+			
+		
+		
+		
+</head>
+
+ 
+	
+
+<div style="border: 1px solid blue; background-color: FFFFFF">
+		<div class="linear-gradient">
+<header class="site-header">
+            <div class="site-identity">
+                <h1><a href="#">Портал о Vr технологиях</a></h1>
+            </div>
+            <nav class="site-navigation">
+                <ul class="nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#22">VR искусство</a></li>
+                    <li><a href="#33">История шлемов</a></li>
+                    <li><a href="#4">Игры</a></li>
+					<li><a href="#end">О нас</a></li>
+                </ul>
+            </nav>
+        </header>
+</div>
+	</div>
+	
+
+<body>	
+	
+	
+	<img src="img/Vr_лого3.png" height="66" width="63" style="position: absolute; top: 5px; left: 10px">
+	
+	
+<div> <!серая полоска полоса поисковой строки>
+
+		
+  <main style="max-width: 400px; display: flex; padding-bottom: 800px; padding-top: 60px; padding-left: 50px;padding-right: 90%">
+	  <article style="width:1800px; height:820px; background:#FFFFFF; position: absolute; right: 30px; filter: blur(5px); opacity: 0.3;top: 120px; border-radius: 50px; border: 10px solid #000000">  <!прозрачный фон для текста>
+		  </article>
+	  <article style="position: absolute;margin-right: 40px; top: 140px">
+		  
+		  <article class="article">
+		<h2 style="padding-left: 50px;font-size: 30" class="shadow">Счастливый обладатель вр шлема и руля</h2>
+	<div class="img2"><img src="img/Вр_водитель.jpg" height="460" width="700" style="margin-right: 100px; margin-top: 0px;float: right;box-shadow: 4px 4px 5px #000"></div> 
+</article>
+		  
+<div class="text-content">
+		<h2 style="color: black;font-size: 50;line-height: 0.3; 
+				   color:#1E90FF!important;
+					text-shadow: 1px 0 1px #000, 
+					0 1px 1px #000, 
+					-1px 0 1px #000, 
+					0 -1px 1px #000;
+				    padding-left: 100px"><p> VR - будущее <p>которое уже наступило</h2>
+	
+
+		<p class="shadow" style="font-size: 25; position: relative; left: 60px; margin-right: 90px"><br>Технология виртуальной реальности (VR) стала популярной 
+	<br>среди массового пользователя всего 
+	<br>несколько лет назад, а до этого считалась чем-то 
+	<br>крайне необычным и дорогостоящим как для разработки, 
+	<br>так и для использования.	  
+	До сих пор еще не все знают, 
+	<br>что представляет собой VR, где используется эта 
+	<br>технология и как самостоятельно погрузиться в этот мир, 
+	<br>потратив минимальное количество средств.</p> 
+<p style="color: white;font-size: 20; padding-left: -60px" class="shadow">
+	<br>VR — технология требовательная и сложная. Для ее использования нужны специальные очки виртуальной реальности, которые должны быть у пользователя. Виртуальная реальность предполагает полное погружение человека в виртуальную среду, поэтому, с одной стороны, ее применение в искусстве требует больше ресурсов и предъявляет определенные ограничения для пользователей. С другой стороны, VR дарит гораздо больше эмоций от использования.
+	<br>	В режиме VR пользователь может как проходить игру, так и смотреть видеоролик, записанный в режиме 360 градусов. Это означает, что при повороте головой видно, что происходит сзади или сбоку, а это и является основным составляющим подобного погружения. В играх человек взаимодействует с предметами и окружающим миром при помощи клавиатуры, мыши или других контроллеров.
+</p>
+</div>
+<br>
+    </article>
+<br>
+	 </main>
+	
+
+
+<div id="2" class="section">
+			<p id="22" style="position: relative; top: -160px"> </p>        <!Здесь невидимый текст>  
+	<div class="text-content" style="border: 2px solid white; position: relative; top: -200px"> 
+		<h2 class="shadow" style="font-size: 30px">Культура и искусство в VR</h2>
+		<p style="color: white; font-size: 20px" class="shadow">Новые эмоции и впечатления <br>для ценителей прекрасного</p>
+	</div>
+</div>	  
+
+	
+<div style="background:no-repeat center/100% url(https://animarmedia.com/wp-content/uploads/2019/07/hudozhnica-vr_1.jpg); min-height: 110vh; margin: -2em auto">
+	<div class="text-content">
+		<div>
+		<h2 style="color: white; position: relative; margin-left: 10px; padding-right: 1200px; top: 70px; font-size: 30px" class="shadow">Виртуальная реальность — это не только и не столько про игры, сколько в целом про развитие человечества, про новые возможности практически во всех сферах современной жизни: от медицины и промышленности до маркетинга и строительства.</h2>
+			</div>
+		<p style="position: relative; font-size: 23px; left: 1150px; margin-right: 1200px; top: 200px" class="shadow">И не могут эти функциональные и эффективные технологии обойти стороной такую важную, даже неотъемлемую часть жизни современного общества, как искусство и культура. И конечно, такая обширная и важная сфера просто не могла остаться в стороне от внедрения самых современных технологий. На самом деле, примеров уже реализованных проектов с использованием виртуальной реальности огромное количество, только действительно интересных и зрелищных — сотни.</p>
+	</div>
+</div>	
+
+	
+	<div style="background:no-repeat center/100% url(img/Ночное_кафе.jpg); min-height: 110vh; position: relative; margin-top: -30px">
+		
+		<h2 style="color: white; position: relative; margin-left: 100px; padding-right: 1200px; left: 90px ;top: 50px; font-size: 30px; margin-right: 200px" class="shadow">«Ночное кафе»</h2>
+				<p style="color: white; position: relative; left: 20px; padding-left: 10px; padding-right: 1200px; top: 50px; font-size: 20px; margin-right: 100px" class="shadow">Это захватывающая среда виртуальной реальности, которая позволяет вам из первых рук познакомиться с миром Винсента ван Гога. Найдите минутку, чтобы полюбоваться его культовыми подсолнухами в трех измерениях, или обойдите кресло, которое он нарисовал в своей спальне, чтобы увидеть его под другим углом. Окунитесь в яркие цвета прямо из его палитры.</p>
+		<div>
+		<img src="img/The_Night_Cafe2.webp" style="position: absolute; right: 50px; top: 400px; width: 20%">
+		<img src="img/The_Night_Cafe3.webp" style="position: absolute; right: 50px; top: 700px; width: 20%">
+		<img src="img/The_Night_Cafe5.webp" style="position: absolute; right: 510px; top: 700px; width: 20%">
+		</div>
+		
+		</div>
+	
+	<div style="background:no-repeat center/100% url(img/коллаж4.png); min-height: 160vh; position: relative; top: -120px">
+		
+		<p style="text-align: center; position: relative; top: 80px; font-size: 30px; padding-left: 120px; padding-right: 120px" class="shadow">В 2016 году Google открыл свободный доступ к графическому редактору Tilt Brush. В Tilt Brush мазок является одновременно и плоским изображением, и скульптурой, а значит, существует как пространство, где находится и то, и другое. Лучше всего это демонстрирует само видео:</p>
+		<iframe style="position: relative; top: 90px; box-shadow: 5px 5px 10px #000" class="marginauto" width=70% height=70% src="https://www.youtube.com/embed/TckqNdrdbgk?si=J1Yj1_8AQPQgcBB7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		
+		<iframe style="margin-left: 33px; position: relative; top: 150px; box-shadow: 5px 5px 10px #000; min-height: 33vh" width=30% height=30% src="https://www.youtube.com/embed/tjk4S7iudwM?si=SnWAz2kZWiePHCdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		
+		<iframe style="margin-left: 45px; position: relative; top: 150px; box-shadow: 5px 5px 10px #000; min-height: 33vh" width=30% height=30% src="https://www.youtube.com/embed/R8ofRw92aRs?si=C2jHenlIL2wXGPtD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div>
+		<iframe style="position: relative; top: -165px; left: 1250px; box-shadow: 5px 5px 10px #000; min-height: 33vh" width=30% height=30% src="https://www.youtube.com/embed/DunWmzd8kXU?si=KnkapaVPrXWoYA75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+	</div>	
+	
+	
+	
+	<div id="" style="background:no-repeat center/100% url(img/sutu_explorer_vr_art.jpg); position: relative; top: -120px; margin: -10em auto;">
+		<div id="33" class="section" style="position: relative; top: 115px">
+				<div class="text-content" style="border: 2px solid white; position: relative; top: 350px; margin-left: 500px; margin-right: 500px; margin-bottom: 1000px">
+					<h2 style="text-align: center; font-size: 30px" class="shadow">История создания и развития VR</h2>
+					<p style="color: white; text-align: center; font-size: 20px" class="shadow">Когда-то технологии виртуальной реальности в научном обществе считались фикцией, неисполнимой фантастикой из книг и кинематографа. Но теперь, в мире, где существует относительно развитая экосистема, состоящая из таких устройств, как Oculus Rift, HTC Vive, Lenovo Explorer и PlayStation VR, стоит вспомнить что было до них.</p>
+				</div>
+		</div>	
+	</div>
+	
+	
+
+	<div style="background:no-repeat center/100% url(img/Смешные_очки.jpeg); min-height: 130vh; position: relative; top: 0px; margin: -17em auto">
+		<p style="text-align: center; position: relative; top: 700px; font-size: 30px" class="shadow">В 2014 году 21-летний Палмер Лаки за 2 миллиарда долларов продал Фейсбуку компанию Oculus VR и VR-очки Oculus Rift. Так начинается новейшая история виртуальной реальности<br>
+		Однако она старше интернета на 40 лет. Её история развивается циклами: сперва её ангажировано ждут, потом разочарованно забывают. Но и в 70-е, и в 2020-е о ней думают всё то же: VR = будущее. Это новое медиа, понтон для сторителлинга, гейминга, и, наконец, искусства. Да VR с самого начала была связана с ним.<br><br>
+		Не случайно её разрабатывали кинематографист Morton Heilig, художники Myron Krueger и Jeffrey Shaw, поэтесса Char Davies, музыкант Jaron Lanier и многие, другие.</p>
+</div>
+	<div style="background:no-repeat center/100% url(img/Белый_фон.png); margin: -40em auto; position: relative; top: 0px">
+	<center><img src="img/фото-2.jpg" style="position: relative; top: 650px" ></center>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -150px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">Первое имя в этой истории — Morton Heilig. В 1962-м он запатентовал кинотеатр будущего «Сенсораму» — игровой автомат с мультисенсорным коробом, продуцирующим изображение, звук, запахи, вибрации и бруклинский ветерок. Но технология была забыта. Так вяло стартовала VR.<br><br>
+		Однако, как единственная “та самая” технология, VR не существует. Среди изобретений в области: Dataglove, VPL EyePhone, Ultimate Display, CAVE, Sensorama, NASA VIEW, Aspen Movie Map, EyeToy, Microsoft Kinect Motion, OCULUS RIFT, Move controllers и другие, и другие.
+		</p>
+		</div>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -790px; left: 1500px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">Все они были созданы, чтобы решить эргономические и вытекающие из них технические проблемы. Ведь даже относительно современные гарнитуры 2010-х годов было физически сложно носить. Тяжёлые, сминавшие лицо, они тормозили со сменой кадров на 5-10 секунд, вызывая тошноту, головокружение и головные боли. Современная же проблема VR – контент.  В неё синтезируется всё: текст, музыка, видео, скульптура, рисунок, 3D, анимация, игровые механики и зритель. Её возможности не ограничены, так куда идти, куда смотреть?
+Кажется, столь вариативная, виртуальная реальность наиболее органичным способом списывается в игровую индустрию, грезящую выбором.
+		</p>
+		</div>
+</div>
+		
+	<div style="background:no-repeat center/100% url(img/Белый_фон22.png); margin: -20em auto; position: relative; top: 0px ; margin: -54em auto">
+	<center><img src="img/Очки_телевизор22.jpeg" style="position: relative; top: 350px" ></center>
+		<h2 style="color: black; text-align: center; position: relative; top: -470px; font-size: 30px">Очки-телевизор Хьюго Ге́рнсбека</h2>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -470px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">В 1963-м году появляются серийные очки-телевизор, разработанные писателем и изобретателем Хьюго Ге́рнсбека. Они всё еще не отслеживают движения головы, не предназначены для работы с компьютерами. Очки позволяют принимать телепередачи и воспроизводить телеконтент (в т.ч. и стереоизображения) на двух небольших кинескопах. Торчащие из устройства антенны для приёма, у покупателей в 60-е вызывали стойкие ощущения с космической и даже инопланетной тематикой. В отличие от предыдущих устройств, очки-телевизор выпускались серийно.
+		</p>
+		</div>
+
+</div>
+	
+	
+		<div style="background:no-repeat center/100% url(img/Белый_фон22.png); position: relative; top: 0px; margin: 20em auto;">
+	<center><img src="img/Дамоклов меч.jpeg" style="position: relative; top: 550px" ></center>
+		<h2 style="color: black; text-align: center; position: relative; top: -150px; font-size: 30px">Вклад Сазерленда и «Дамоклов меч»</h2>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -75px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">Пионером VR-технологии, связанной с компьютерами, заслуженно считается американский учёный Айвен Сазерленд, более известный как один из отцов интернета. В 1965 году Сазерленд описал концепцию, в которой компьютерная имитация мира воздействует на пользователя через специальный шлем, который создаёт настолько реалистичную иллюзию, что человек не способен отличить имитацию от действительности, при этом у пользователя есть возможность взаимодействовать с объектами в виртуальной реальности.
+		</p>
+		</div>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -630px; left: 1500px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">Описанные возможности в дальнейшем воспринимались исследователями и разработчиками как цель, концепция стала восприниматься как список будущих достижений и некий футуристический план. Пик развития технологии Сазерленд видел в том, чтобы пользователь мог сравнить опыт от использования VR c кэрроловским путешествием Алисы в Страну чудес.
+		</p>
+		</div>
+</div>
+	
+	
+	
+	
+	
+	<div style="background:no-repeat center/100% url(img/Белый_фон33.png); position: relative; top: 0px; margin: -58em auto">
+	<center><img src="img/123123.jpeg" style="position: relative; top: 350px"></center>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -220px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">В 1968 году Сазерленд совместно со своим учеником и коллегой Бобом Спроуллом разработали первый компьютерный шлем виртуальной реальности. Его назвали “Дамоклов меч”, в связи с характерными особенностями стационарного крепления. Устройство, по текущим меркам, было достаточно простым и отображало на экране только примитивные 3D-модели в виде незамысловатых объемных геометрические форм.
+		</p>
+		</div>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -675px; left: 1500px; font-size: 20px">
+		<p style="color: black; padding-left: 5px">“Дамоклов меч” был оснащен отслеживанием движений головы, в зависимости от которых менялась перспектива на экране. Устройство было исключительно лабораторным, в первую очередь из-за своей высокой массы, которая требовала крепление к потолку.
+		</p>
+		</div>
+</div>
+	
+	
+	
+	<div id="" style="background:no-repeat center/100% url(img/Future_of_gaming.jpg); position: relative; top: 0px; margin: 45em auto;">
+		<div id="4" class="section" style="position: relative; top: 80px">
+				<div class="text-content" style="border: 2px solid white; position: relative; top: 350px; margin-left: 500px; margin-right: 500px; margin-bottom: 1000px">
+					<h2 style="text-align: center; font-size: 30px" class="shadow">Игры, ради которых стоит купить VR</h2>
+					<p style="color: white; text-align: center; font-size: 20px" class="shadow">Виртуальная реальность уже не первый год захватывает умы многих прогрессивных геймеров, а с появлением в 2023 году PlayStation VR2 и Oculus Quest 3 обещает и вовсе выйти на новых уровень. В этой небольшой подборке вы познакомитесь с проектами, что, по мнению автора, являются отличным примером того, почему вам стоит задуматься о покупке VR-очков уже сегодня.</p>
+				</div>
+		</div>	
+	</div>
+	
+	
+	<div id="" style="background:no-repeat center/100% url(img/Bonelab.jpg); position: relative; top: 0px; margin: -75em auto;">
+		<div id="33" class="section" style="position: relative; top: 80px">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9X180AZl5jg?si=Gzo0d4f7IFmdOtQJ&amp;start=38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: relative; top: 380px; left: 1200px"></iframe>
+			<h2 style="position: relative; top: -40px; left: 1390px; font-size: 40px; margin-right: auto" class="shadow">Bonelab</h2>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -40px; left: 30px;font-size: 20px">
+			
+		<p style="color: white; padding-left: 5px" class="shadow">Благодаря глубокому и захватывающему сюжету, потрясающим визуальным эффектам и инновационной игровой механике Boneworks предлагает на платформах HTC Vive и Oculus Rift непревзойденный опыт виртуальной реальности, который будет увлекать игроков от начала до конца. Находясь в таинственном и обширном цифровом мире, игроки отправляются в напряженное приключение, полное умопомрачительных головоломок, захватывающих сражений и детально проработанной среды. Boneworks докручивает до максимума ощущения от игры в виртуальной реальности, реалистично воссоздавая физику и позволяя игрокам взаимодействовать с объектами.
+		</p>
+		</div>
+		<div style="margin-right: 1500px; margin-left: 20px; position: relative; top: -500px; left: 1400px; font-size: 20px">
+			<h2 class="shadow">Кому понравится</h2>
+		<p style="color: White; padding-left: 5px" class="shadow">
+Boneworks понравится широкому кругу игроков, которым нравится захватывающий и инновационный игровой процесс. Геймеры, любящие глубокие сюжетные линии и атмосферные миры, будут очарованы загадочным и обширным цифровым царством Boneworks.
+		</p>
+		</div>
+			<div style="margin-right: 1500px; margin-left: 20px; position: relative; top: -520px; left: 1450px; font-size: 20px">
+				<h2 class="shadow">Оценка:</h2>
+		<p style="color: White; padding-left: 5px" class="shadow">
+Metacritics 79/100 (PC)<br>
+IGN 7.9/10
+			</p>
+				</div>
+		</div>	
+	</div>
+	
+	
+	
+	
+	<div id="" style="background:no-repeat center/100% url(img/Цитадель.webp); position: relative; top: 0px; margin: 28em auto;">
+		<div id="33" class="section" style="position: relative; top: 80px">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LTLotwKpLgk?si=pO-MM-tykFcBTnRx&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: relative; top: 380px; left: 1200px"></iframe>
+			<h2 style="position: relative; top: -40px; left: 1350px; font-size: 40px; margin-right: auto" class="shadow">Half-Life: Alyx</h2>
+		<div style="border: 2px solid black; margin-right: 1500px; margin-left: 20px; position: relative; top: -40px; left: 30px;font-size: 20px">
+			
+		<p style="color: white; padding-left: 5px" class="shadow">Half-Life: Alyx погружает игроков в антиутопический мир серии Half-Life. Разработанная корпорацией Valve, она служит приквелом к событиям Half-Life 2. Действие происходит в разрушающемся Сити-17. Игроки берут на себя роль Аликс Вэнс, находчивой молодой женщины, сражающейся против инопланетных сил Альянса.
+
+Благодаря мощи виртуальной реальности игроки перемещаются по запутанным средам, участвуют в напряженных боях и решают сложные головоломки для продвижения повествования. Игра демонстрирует потрясающие визуальные эффекты, реалистичную физику и захватывающую сюжетную линию, которая расширяет любимую вселенную Half-Life.
+		</p>
+		</div>
+		<div style="margin-right: 1500px; margin-left: 20px; position: relative; top: -450px; left: 1400px; font-size: 20px">
+			<h2 class="shadow">Кому понравится</h2>
+		<p style="color: White; padding-left: 5px" class="shadow">
+Поклонники оригинальных игр Half-Life оценят богатое повествование игры, поскольку оно расширяет повествование и заполняет пробелы в знаниях серии. Игроки, которые любят разгадывать головоломки и исследовать мир, получат удовольствие от сложной и детализированной среды игры.
+		</p>
+		</div>
+			<div style="margin-right: 1500px; margin-left: 20px; position: relative; top: -450px; left: 1450px; font-size: 20px">
+				<h2 class="shadow">Оценка:</h2>
+		<p style="color: White; padding-left: 5px" class="shadow">
+Metacritics 93/100 (PC)<br>
+IGN 10/10
+			</p>
+				</div>
+		</div>	
+	</div>
+	
+	
+
+	
+	
+	
+	<div class="footer" style="margin: -41.5em auto; opacity: .8">
+</div>
+		<div style="border: 2px solid ; position: relative; top: 230px; padding-bottom: 5em">
+  <div class="wrapper">
+    <div class="block" style="width:150%">
+	  <b><p style="text-align: center">Внимание</p></b>
+		<p style="text-align: center">Переходя по данным ссылкам, вы сами несёте ответственность за дальнейшие действия. Этот сайт является лишь демонстрацией навыков, преобретённых на парах. А также использование чужих материалов используется лишь для обучения и несет лишь показательный характер. Данный сайт не будет использоваться в коммерческих целях</p>
+	  </div>
+    <div class="block" style="width:150%">
+      <b><a name="end"><p style="text-align: center">Контактная информация</p></b></a>
+	  <p style="text-align: center"><br><br>Станюковича, 60А<br>Тел. +7(999) 999-99-99<br>Сотовый  8(987) 654-3210</p>
+    </div>
+	<div class="block" style="width:150%">
+	  <b><p style="text-align: center">Мы в соцсетях</p></b><br><br>
+		<a style="margin: 1 100 1" href="https://vk.com/feed/pisos_eblantos"><img src="img/icons8-vk-в-круге-96.png" alt=""></a>
+		<a href="https://t.me/General_KAKTUS"><img src="img/icons8-телеграмма-app-96.png" alt=""></a>
+	  </div>
+		 </div>
+  </div>
+	</div>
+	
+	
+	
+		<a href="#" title="Вернуться к началу" class="topbutton">^Наверх</a>
+	
+		<form>
+  <input type="text" placeholder="Искать здесь...">
+  <button type="submit"></button>
+</form>
+    
+  </main>
+	
+
+	
+</body>
+	
+	
+	
+	
+	
+	
+</html>
